@@ -152,14 +152,14 @@
 
         <!-- Right Side: CTA Button & Mobile Menu -->
         <div class="flex items-center gap-3 z-20">
-            <a href="https://whatsapp.com/channel/0029VbBjVRl9Bb63Ba3Xlg2M" class="nav-whatsapp-btn hidden lg:inline-flex items-center justify-center px-5 py-2 text-sm font-bold text-white transition-all duration-200 bg-green-500 rounded-full hover:bg-green-600 shadow-md hover:shadow-green-500/30 whitespace-nowrap">
-                <i class="fab fa-whatsapp ml-2"></i>
-                הצטרפות לערוץ
-            </a>
+            <button onclick="openJoinModal(event)" class="nav-whatsapp-btn hidden lg:inline-flex items-center justify-center px-5 py-2 text-sm font-bold text-white transition-all duration-200 bg-orange-500 rounded-full hover:bg-orange-600 shadow-md hover:shadow-orange-500/30 whitespace-nowrap">
+                <i class="fas fa-paper-plane ml-2"></i>
+                הצטרפות ומעקב
+            </button>
             <!-- Mobile Icon Button -->
-            <a href="https://whatsapp.com/channel/0029VbBjVRl9Bb63Ba3Xlg2M" class="nav-whatsapp-btn lg:hidden inline-flex items-center justify-center w-10 h-10 text-white transition-all duration-200 bg-green-500 rounded-full hover:bg-green-600 shadow-md shrink-0">
-                <i class="fab fa-whatsapp text-xl"></i>
-            </a>
+            <button onclick="openJoinModal(event)" class="nav-whatsapp-btn lg:hidden inline-flex items-center justify-center w-10 h-10 text-white transition-all duration-200 bg-orange-500 rounded-full hover:bg-orange-600 shadow-md shrink-0">
+                <i class="fas fa-paper-plane text-lg"></i>
+            </button>
         </div>
     </div>
 </nav>
@@ -186,11 +186,11 @@
         כל העדכונים, האירועים והחדשות - במקום אחד.
     </p>
 
-    <!-- CTA Button -->
-    <a href="https://whatsapp.com/channel/0029VbBjVRl9Bb63Ba3Xlg2M" class="main-cta-btn group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-green-500 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-600 hover:bg-green-600 shadow-xl hover:shadow-green-500/50 transform hover:-translate-y-1 fade-in-up delay-300">
-        <i class="fab fa-whatsapp text-2xl ml-3"></i>
-        הצטרפו לערוץ העדכונים
-    </a>
+    <!-- CTA Button -> Now opens the Modal -->
+    <button onclick="openJoinModal(event)" class="main-cta-btn group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-orange-500 to-red-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-600 hover:brightness-110 shadow-xl hover:shadow-orange-500/40 transform hover:-translate-y-1 fade-in-up delay-300">
+        <i class="fas fa-bell text-2xl ml-3"></i>
+        בחרו ערוץ הצטרפות ועדכונים
+    </button>
 
     <div class="mt-12 w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center fade-in-up delay-300">
         <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-lg hover:shadow-xl transition-shadow">
@@ -243,6 +243,12 @@
                     כל מה שקורה בקהילה במקום אחד
                 </li>
             </ul>
+
+            <!-- Added action button in about section that triggers the modal -->
+            <button onclick="openJoinModal(event)" class="mt-4 inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all bg-orange-500 rounded-full hover:bg-orange-600 shadow-md">
+                <i class="fas fa-link ml-2"></i>
+                להצטרפות לכל הערוצים שלנו
+            </button>
         </div>
 
         <!-- Mobile Toggle Buttons (Visible only on small screens) -->
@@ -287,7 +293,7 @@
                             <span class="bg-[#dcf8c6] text-gray-600 text-[11px] px-2 py-1 rounded shadow-sm">20/11/2025</span>
                         </div>
                         <div class="self-start max-w-[90%] bg-white rounded-lg rounded-tr-none shadow-sm p-2.5 relative border border-gray-100">
-                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>מליאת העמותה למשחקי תפקידים תתקיים ב18/12/25.</strong>
+                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>מליאת העמותה למשחקי תפקידים תתקיים ב18/12/25.</strong><br>
 בה, יתקיימו בחירות לוועד העמותה ולוועדת הביקורת של העמותה.</p>
                             <div class="mt-1 text-[10px] text-gray-400 text-left flex justify-end items-center gap-1">10:00</div>
                         </div>
@@ -297,7 +303,7 @@
                             <span class="bg-[#dcf8c6] text-gray-600 text-[11px] px-2 py-1 rounded shadow-sm">28/11/2025</span>
                         </div>
                         <div class="self-start max-w-[90%] bg-white rounded-lg rounded-tr-none shadow-sm p-2.5 relative border border-gray-100">
-                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>קהילה חדשה למבוכים ודרקונים בדיסקורד - אש וגלגולים</strong>
+                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>קהילה חדשה למבוכים ודרקונים בדיסקורד - אש וגלגולים</strong><br>
 קהילת Discord חדשה למשחקי תפקידים (בעיקר D&D), שנבנית כחלק מפרויקט גמר לתואר בתקשורת במכללת ספיר.המטרה: ליצור מרחב קהילתי מסודר, בטוח ונגיש, שמחבר בין שחקנים, מנחים ויוצרים מכל רחבי הארץ.בשרת תמצאו:🎲 שולחנות פתוחים🎭 דיונים על המשחק🔥 מקום ללמידה והתפתחות🛠 תמיכה למתחילים📅 אירועים ופעילויות בהמשך
 
 מחפשים במיוחד:✔ שליטי מבוך מנוסים✔ שחקנים ותיקים✔ משתמשים שמכירים היטב Roll20✔ וגם מתחילים סקרנים
@@ -313,7 +319,7 @@
                         </div>
                         <div class="self-start max-w-[90%] bg-white rounded-lg rounded-tr-none shadow-sm p-2.5 relative border border-gray-100">
                             <img src="msg-pic-1.jpg" alt="חגיגות 6000 חברים" class="w-full h-auto max-h-40 object-cover rounded mb-2 border border-gray-200" onerror="this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image'">
-                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>מזל טוב לקהילת שחקני התפקידים הוותיקה של ישראל בפייסבוק!</strong>
+                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>מזל טוב לקהילת שחקני התפקידים הוותיקה של ישראל בפייסבוק!</strong><br>
 שחקני תפקידים בישראל הגיעה למס' מרשים של 6000 חברים וחברות.</p>
                             <div class="mt-1 text-[10px] text-gray-400 text-left flex justify-end items-center gap-1">09:15</div>
                         </div>
@@ -324,7 +330,7 @@
                         </div>
                         <div class="self-start max-w-[90%] bg-white rounded-lg rounded-tr-none shadow-sm p-2.5 relative border border-gray-100">
                             <img src="msg-pic-2.jpg" alt="תערוכת קוביות הגורל" class="w-full h-auto max-h-40 object-cover rounded mb-2 border border-gray-200" onerror="this.src='https://placehold.co/300x200/cccccc/ffffff?text=Image'">
-                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>קוביות הגורל - תערוכת אמנות של משחקי תפקידים בתל אביב</strong>
+                            <p class="text-sm text-gray-800 leading-snug whitespace-pre-wrap"><strong>קוביות הגורל - תערוכת אמנות של משחקי תפקידים בתל אביב</strong><br>
 לפני חצי שנה הוקמה לה חבורה שיצאה להרפתקה, לנסות לדמיין איך אפשר להחיות את הדמיון שלנו אחרי השנתיים האלה, איך עושים מזה משחק ואיך מחברים את הכל לעושר של העולם היהודי. ויצאו פלאים. וזה הופך לתערוכה. תערוכת אמנות של משחקי תפקידים הראשונה בישראל.</p>
                             <a href="https://schechter-gallery.com/games-signup/" target="_blank" class="text-sm text-blue-500 hover:underline mt-1 block break-all">https://schechter-gallery.com/games-signup/</a>
                             <div class="mt-1 text-[10px] text-gray-400 text-left flex justify-end items-center gap-1">11:45</div>
@@ -379,7 +385,7 @@
                                     <p class="text-[11px] text-gray-500">1 דצמ' • <i class="fas fa-globe-americas"></i></p>
                                 </div>
                             </div>
-                            <p class="text-sm text-gray-800 mb-3 whitespace-pre-wrap"><strong>קוביות הגורל - תערוכת אמנות של משחקי תפקידים בתל אביב</strong>
+                            <p class="text-sm text-gray-800 mb-3 whitespace-pre-wrap"><strong>קוביות הגורל - תערוכת אמנות של משחקי תפקידים בתל אביב</strong><br>
 לפני חצי שנה הוקמה לה חבורה שיצאה להרפתקה, לנסות לדמיין איך אפשר להחיות את הדמיון שלנו אחרי השנתיים האלה, איך עושים מזה משחק ואיך מחברים את הכל לעושר של העולם היהודי. ויצאו פלאים. וזה הופך לתערוכה. תערוכת אמנות של משחקי תפקידים הראשונה בישראל.</p>
                             <a href="https://schechter-gallery.com/games-signup/" target="_blank" class="text-sm text-blue-600 hover:underline mb-3 block break-all">https://schechter-gallery.com/games-signup/</a>
                             <img src="msg-pic-2.jpg" class="w-full h-auto rounded-sm border border-gray-100" onerror="this.src='https://placehold.co/400x300/cccccc/ffffff?text=Event+Image'">
@@ -399,7 +405,7 @@
                                     <p class="text-[11px] text-gray-500">30 נוב' • <i class="fas fa-globe-americas"></i></p>
                                 </div>
                             </div>
-                            <p class="text-sm text-gray-800 mb-3 whitespace-pre-wrap"><strong>מזל טוב לקהילת שחקני התפקידים הוותיקה של ישראל בפייסבוק!</strong>
+                            <p class="text-sm text-gray-800 mb-3 whitespace-pre-wrap"><strong>מזל טוב לקהילת שחקני התפקידים הוותיקה של ישראל בפייסבוק!</strong><br>
 שחקני תפקידים בישראל הגיעה למס' מרשים של 6000 חברים וחברות.</p>
                             <img src="msg-pic-1.jpg" class="w-full h-auto rounded-sm border border-gray-100" onerror="this.src='https://placehold.co/400x300/cccccc/ffffff?text=Event+Image'">
                             <div class="flex justify-between items-center text-gray-500 text-xs mt-3 pt-2 border-t border-gray-100">
@@ -418,7 +424,7 @@
                                     <p class="text-[11px] text-gray-500">28 נוב' • <i class="fas fa-globe-americas"></i></p>
                                 </div>
                             </div>
-                            <p class="text-sm text-gray-800 mb-2 whitespace-pre-wrap"><strong>קהילה חדשה למבוכים ודרקונים בדיסקורד - אש וגלגולים</strong>
+                            <p class="text-sm text-gray-800 mb-2 whitespace-pre-wrap"><strong>קהילה חדשה למבוכים ודרקונים בדיסקורד - אש וגלגולים</strong><br>
 קהילת Discord חדשה למשחקי תפקידים (בעיקר D&D), שנבנית כחלק מפרויקט גמר לתואר בתקשורת במכללת ספיר.המטרה: ליצור מרחב קהילתי מסודר, בטוח ונגיש, שמחבר בין שחקנים, מנחים ויוצרים מכל רחבי הארץ.בשרת תמצאו:🎲 שולחנות פתוחים🎭 דיונים על המשחק🔥 מקום ללמידה והתפתחות🛠 תמיכה למתחילים📅 אירועים ופעילויות בהמשך
 
 מחפשים במיוחד:✔ שליטי מבוך מנוסים✔ שחקנים ותיקים✔ משתמשים שמכירים היטב Roll20✔ וגם מתחילים סקרנים
@@ -436,7 +442,7 @@
                                     <p class="text-[11px] text-gray-500">20 נוב' • <i class="fas fa-globe-americas"></i></p>
                                 </div>
                             </div>
-                            <p class="text-sm text-gray-800 whitespace-pre-wrap"><strong>מליאת העמותה למשחקי תפקידים תתקיים ב18/12/25.</strong>
+                            <p class="text-sm text-gray-800 whitespace-pre-wrap"><strong>מליאת העמותה למשחקי תפקידים תתקיים ב18/12/25.</strong><br>
 בה, יתקיימו בחירות לוועד העמותה ולוועדת הביקורת של העמותה.</p>
                         </div>
                     </div>
@@ -476,7 +482,7 @@
                                 <i class="far fa-bookmark text-2xl"></i>
                             </div>
                             <div class="p-3 text-sm">
-                                <p class="whitespace-pre-wrap"><span class="font-bold mr-1">msg.roleplay</span><strong>קוביות הגורל - תערוכת אמנות של משחקי תפקידים בתל אביב</strong>
+                                <p class="whitespace-pre-wrap"><span class="font-bold mr-1">msg.roleplay</span><strong>קוביות הגורל - תערוכת אמנות של משחקי תפקידים בתל אביב</strong><br>
 לפני חצי שנה הוקמה לה חבורה שיצאה להרפתקה, לנסות לדמיין איך אפשר להחיות את הדמיון שלנו אחרי השנתיים האלה, איך עושים מזה משחק ואיך מחברים את הכל לעושר של העולם היהודי. ויצאו פלאים. וזה הופך לתערוכה. תערוכת אמנות של משחקי תפקידים הראשונה בישראל.</p>
                                 <span class="text-blue-800 break-all">https://schechter-gallery.com/games-signup/</span>
                                 <span class="text-gray-400 text-xs mt-2 block">1 בדצמבר</span>
@@ -502,7 +508,7 @@
                                 <i class="far fa-bookmark text-2xl"></i>
                             </div>
                             <div class="p-3 text-sm">
-                                <p class="whitespace-pre-wrap"><span class="font-bold mr-1">msg.roleplay</span><strong>מזל טוב לקהילת שחקני התפקידים הוותיקה של ישראל בפייסבוק!</strong>
+                                <p class="whitespace-pre-wrap"><span class="font-bold mr-1">msg.roleplay</span><strong>מזל טוב לקהילת שחקני התפקידים הוותיקה של ישראל בפייסבוק!</strong><br>
 שחקני תפקידים בישראל הגיעה למס' מרשים של 6000 חברים וחברות.</p>
                                 <span class="text-gray-400 text-xs mt-2 block">30 בנובמבר</span>
                             </div>
@@ -520,7 +526,7 @@
                             <!-- Instagram Text Graphic style -->
                             <div class="w-full aspect-square bg-gradient-to-br from-orange-400 to-red-600 flex items-center justify-center p-6 text-center shadow-inner">
                                 <p class="text-white text-lg font-bold leading-relaxed whitespace-pre-wrap">מליאת העמותה למשחקי תפקידים תתקיים ב18/12/25.
-                                    
+                                    <br>
 בה, יתקיימו בחירות לוועד העמותה ולוועדת הביקורת של העמותה.</p>
                             </div>
                             <div class="p-3 pb-1 flex justify-between">
@@ -552,6 +558,81 @@
         </div>
     </div>
 </section>
+
+<!-- Beautiful Selection Modal -->
+<div id="join-modal" class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300">
+    <!-- Backdrop Blur overlay -->
+    <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm" onclick="closeJoinModal()"></div>
+    
+    <!-- Modal Dialog Box -->
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl relative z-10 mx-4 transform scale-95 transition-all duration-300 max-h-[90vh] overflow-y-auto custom-scroll">
+        <!-- Close Button -->
+        <button onclick="closeJoinModal()" class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 transition text-2xl focus:outline-none">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <i class="fas fa-paper-plane text-2xl text-orange-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900">איפה נוח לכם להתעדכן?</h3>
+            <p class="text-gray-500 text-sm mt-1">בחרו את הפלטפורמה המועדפת עליכם והצטרפו לקהילה שלנו!</p>
+        </div>
+
+        <!-- 3 Platform choices grid -->
+        <div class="flex flex-col gap-4">
+            
+            <!-- WhatsApp Choice -->
+            <a href="https://whatsapp.com/channel/0029VbBjVRl9Bb63Ba3Xlg2M" target="_blank" class="flex items-center justify-between p-4 rounded-2xl border border-gray-100 bg-green-50/40 hover:bg-green-50 hover:border-green-200 transition-all duration-200 group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-500 text-2xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="text-right">
+                        <h4 class="font-bold text-gray-900 text-base">לערוץ הוואטסאפ</h4>
+                        <p class="text-xs text-gray-500 mt-0.5">עדכונים ישירים לנייד בזמן אמת</p>
+                    </div>
+                </div>
+                <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center text-sm group-hover:translate-x-[-4px] transition-transform">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+            <!-- Facebook Choice -->
+            <!-- Note: You can change the href attribute below to your official Facebook page URL -->
+            <a href="https://www.facebook.com" target="_blank" class="flex items-center justify-between p-4 rounded-2xl border border-gray-100 bg-blue-50/40 hover:bg-blue-50 hover:border-blue-200 transition-all duration-200 group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-2xl">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="text-right">
+                        <h4 class="font-bold text-gray-900 text-base">לעמוד הפייסבוק</h4>
+                    </div>
+                </div>
+                <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm group-hover:translate-x-[-4px] transition-transform">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+            <!-- Instagram Choice -->
+            <!-- Note: You can change the href attribute below to your official Instagram profile URL -->
+            <a href="https://www.instagram.com" target="_blank" class="flex items-center justify-between p-4 rounded-2xl border border-gray-100 bg-pink-50/40 hover:bg-pink-50 hover:border-pink-200 transition-all duration-200 group">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-yellow-100 to-pink-100 rounded-xl flex items-center justify-center text-pink-500 text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="text-right">
+                        <h4 class="font-bold text-gray-900 text-base">לעמוד האינסטגרם</h4>
+                    </div>
+                </div>
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 text-white flex items-center justify-center text-sm group-hover:translate-x-[-4px] transition-transform">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
@@ -588,6 +669,24 @@
         } else if(platform === 'ig') {
             activeBtn.className = 'flex items-center gap-2 px-5 py-2.5 rounded-full font-bold transition-all bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md text-sm sm:text-base';
         }
+    }
+
+    // Modal Control Logic
+    function openJoinModal(e) {
+        if(e) e.preventDefault();
+        const modal = document.getElementById('join-modal');
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.querySelector('.transform').classList.remove('scale-95');
+        modal.querySelector('.transform').classList.add('scale-100');
+        document.body.classList.add('overflow-hidden');
+    }
+
+    function closeJoinModal() {
+        const modal = document.getElementById('join-modal');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.querySelector('.transform').classList.remove('scale-100');
+        modal.querySelector('.transform').classList.add('scale-95');
+        document.body.classList.remove('overflow-hidden');
     }
 </script>
 </body>
