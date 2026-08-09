@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /test.html
+
+Sitemap: https://msg.roleplay.top/sitemap.xml
+
+# AI / LLM knowledge files
+# https://msg.roleplay.top/llms.txt
+# https://msg.roleplay.top/agents.json

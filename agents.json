@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "name": "דואר עוף-חול",
+  "alternateName": "Phoenix Mail",
+  "description": "המבזקון הרשמי של קהילת משחקי התפקידים בישראל — ערוץ וואטסאפ עם עדכונים על כנסים ואירועים (דרקוניקון, אייקון), משחקים ושיטות חדשות, מבצעים וחדשות מעסקים וקהילות בתחום. פרויקט אח של שער להרפתקה.",
+  "url": "https://msg.roleplay.top/",
+  "organization": "גמ\"ה - גלגול מיזמים התנדבותיים",
+  "organizationUrl": "https://roleplay.top",
+  "siblingProject": "https://gate.roleplay.top",
+  "channels": {
+    "whatsapp": "https://whatsapp.com/channel/0029VbBjVRl9Bb63Ba3Xlg2M",
+  },
+  "knowledge_files": {
+    "llms_txt": "https://msg.roleplay.top/llms.txt",
+    "sitemap": "https://msg.roleplay.top/sitemap.xml"
+  },
+  "actions": [
+    {
+      "name": "join_whatsapp_channel",
+      "description": "הצטרפות לערוץ הוואטסאפ של דואר עוף-חול לקבלת עדכונים שוטפים מקהילת משחקי התפקידים בישראל.",
+      "url": "https://whatsapp.com/channel/0029VbBjVRl9Bb63Ba3Xlg2M",
+      "method": "GET"
+    },
+    {
+      "name": "read_homepage",
+      "description": "צפייה בעמוד הבית של דואר עוף-חול ובמידע על הערוץ וסוגי העדכונים.",
+      "url": "https://msg.roleplay.top/",
+      "method": "GET"
+    },
+    {
+      "name": "fetch_community_directory",
+      "description": "שליפת מאגר הקהילות, החוגים, החנויות והכנסים בפורמט JSON נקי מהפרויקט האח 'שער להרפתקה'.",
+      "url": "https://gate.roleplay.top/data.json",
+      "method": "GET"
+    }
+  ]
+}
